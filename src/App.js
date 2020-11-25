@@ -60,11 +60,11 @@ class App extends Component {
     })
   }
 
-  changeIt = () =>{
+  changeIt = (event) =>{
     this.setState({
       otherState:[
         {
-          userName: "micheal"
+          userName: event.target.value
         }
       ]
     })
@@ -113,8 +113,9 @@ class App extends Component {
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler.bind(this,"max!")} change={this.nameChangedHandler}/>
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies: Racing</Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
-        <UserInput/>
-        <UserOutput user={this.state.otherState[0].userName} click={this.changeIt}/>
+        <UserInput changed={this.changeIt}/>
+        <UserOutput user={this.state.otherState[0].userName} cname={this.state.otherState[0].userName}/>
+        <UserOutput user={this.state.otherState[0].userName} cname={this.state.otherState[0].userName} />
       </div>
     );
   }

@@ -2,10 +2,9 @@ import React from 'react'
 
 const UserOutput = (props) => {
         return (
-            <div className="Person" onClick={props.click}>
-                <p>helllo {props.user} hello</p>
-
-                <p>what up ninja!@</p>
+            <div className="Person">
+                <label for="output">output: </label>
+                <p>helllo {props.user} hello  {props.user}</p>
             </div>
         )
 }
