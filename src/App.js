@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from "./Person/Person"
+import UserInput from "./UserInput"
+import UserOutput from "./UserOutput"
+
 
 class App extends Component {
 
@@ -21,6 +24,14 @@ class App extends Component {
 
     }
 
+    ],
+    otherState: [
+      {
+        userName: "jonathan"
+      },
+      {
+        userName: "mark"
+      }
     ]
   }
 
@@ -46,6 +57,16 @@ class App extends Component {
       ]
 
       
+    })
+  }
+
+  changeIt = () =>{
+    this.setState({
+      otherState:[
+        {
+          userName: "micheal"
+        }
+      ]
     })
   }
 
@@ -92,6 +113,8 @@ class App extends Component {
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler.bind(this,"max!")} change={this.nameChangedHandler}/>
         <Person name={this.state.persons[1].name} age={this.state.persons[1].age}>My Hobbies: Racing</Person>
         <Person name={this.state.persons[2].name} age={this.state.persons[2].age} />
+        <UserInput/>
+        <UserOutput user={this.state.otherState[0].userName} click={this.changeIt}/>
       </div>
     );
   }
