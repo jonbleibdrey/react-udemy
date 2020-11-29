@@ -36,30 +36,6 @@ class App extends Component {
     showPersons: false
   }
 
-  switchNameHandler = () => {
-    
-    this.setState( {
-      persons: [
-        {
-        name: "BIG jonathan", 
-        age: 28,
-      },
-      {
-        name: "Big jackson", 
-        age: 26,
-  
-      },
-      {
-        name: " big max", 
-        age: 65,
-  
-      }
-  
-      ]
-
-      
-    })
-  }
 
   changeIt = (event) =>{
     this.setState({
@@ -115,7 +91,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, im a react app</h1>
         <p>this is really working</p>
-        <button style={style} onClick={this.togglePersonHandler}>Switch name</button>
+        <button style={style} onClick={this.togglePersonHandler}>toggle name</button>
         {this.state.showPersons ?
           <div>
         <Person name={this.state.persons[0].name} age={this.state.persons[0].age} click={this.switchNameHandler.bind(this,"max!")} change={this.nameChangedHandler}/>
