@@ -14,7 +14,7 @@ text-align: center;
     width: 450px;
 }
 `
-
+// i think this workd?
 const Person = (props) => {
     // const style ={
     //     '@media(min-width: 500px)': {
