@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from "./Person/Person"
-import UserInput from "./UserInput"
-import UserOutput from "./UserOutput"
+
 
 
 class App extends Component {
@@ -71,7 +70,8 @@ class App extends Component {
   render() {
     
     const style = {
-      backgroundColor: "white",
+      backgroundColor: "green",
+      color:"white",
       font: "inherit",
       border: "1px solid blue",
       padding: "8px",
@@ -92,6 +92,8 @@ class App extends Component {
           })}
         </div>
       )
+
+      style.backgroundColor = "red"
     }
       return(
       <div className="App">
